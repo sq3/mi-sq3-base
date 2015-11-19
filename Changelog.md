@@ -1,5 +1,11 @@
 # Changelog
 
+# 15.3.1
+
+### New
+
+* Nagios NRPE will help to monitor our zones even better. [Tobias Schäfer]
+
 # 15.3.0
 
 ### New

@@ -53,3 +53,8 @@ Configure ssh public and private key pairs for the host daemon via `mdata`.
 - `ssh_host_dsa_key`:     private SSH dsa key
 - `ssh_host_dsa_key.pub`: public SSH dsa key
 
+### nagios
+
+A comma-delimited list of IP address or hostnames that are allowed to talk to the NRPE daemon.
+
+- `nrpe_allowed_hosts`: ip addresses, hostnames allowed to talk to nrpe daemon
