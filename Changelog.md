@@ -1,5 +1,11 @@
 # Changelog
 
+# 15.3.2
+
+### Fix
+
+* Allow IPv6 statless addrconf. Removed ndpd config file. [Tobias Schäfer]
+
 # 15.3.1
 
 ### New
