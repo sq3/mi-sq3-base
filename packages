@@ -24,3 +24,6 @@ findutils
 sudo
 # backup
 znapzend
+# nagios
+nagios-nrpe
+nagios-plugins
