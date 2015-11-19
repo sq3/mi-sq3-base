@@ -1,10 +1,10 @@
 {
-	"name":         "core-base",
+	"name":         "mesh-base",
 	"version":      "15.3.2",
-	"description":  "Base core.io image",
-	"organization": "SkyLime",
+	"description":  "mesh.io base image",
+	"organization": "Acme",
 	"brand":        "Instance",
-	"homepage":     "https://github.com/skylime/mi-core-base",
+	"homepage":     "https://github.com/mesh-io/mi-mesh-base",
 	"base":         "fec7e254-6e98-11e5-9284-3f9c607cb3e7",
 	"customer_metadata": {
 		"root_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the root user"},
