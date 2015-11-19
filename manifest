@@ -1,7 +1,7 @@
 name="mesh-base"
 organization="Acme"
 brand="Instance"
-version="15.3.2"
+version="15.3.3"
 description="mesh.io base image"
 homepage="https://github.com/mesh-io/mi-mesh-base"
 users="root admin"

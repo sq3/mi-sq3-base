@@ -1,60 +1,30 @@
-# mi-core-base
+# mi-mesh-base
 
-This repository is based on [Joyent mibe](https://github.com/joyent/mibe).
+This repository is based on [SkyLime mibe base](https://github.com/skylime/mi-core-base).
 
 ## description
 
-Basic core.io mibe image with default setup of infrastructure services like
-munin and remote syslog. This should be the default image for all core.io zones.
+The mesh.io base mibe image with default setup of infrastructure services like
+Munin node, Nagios NRPE, remote syslog and email relay.
 
 ## mdata variables
 
-### root authorized_keys
+- `root_authorized_keys`: SSH root user public authorized keys
+- `root_ssh_rsa`:         SSH root user private rsa key
+- `root_ssh_rsa_pub`:     SSH root user public rsa key (mostly not required)
+- `syslog_host`:          syslog server address and port (seperated by colon)
+- `mail_smarthost`:       address of remote smtp server
+- `mail_auth_user`:       smtp username if authentication is required
+- `mail_auth_pass`:       smtp password if authentication is required
+- `mail_adminaddr`:       admin email address alias
+- `ssh_host_rsa_key`:     SSH daemon private rsa key
+- `ssh_host_rsa_key.pub`: SSH daemon public rsa key
+- `ssh_host_dsa_key`:     SSH daemon private dsa key
+- `ssh_host_dsa_key.pub`: SSH daemon public dsa key
+- `munin_master_allow`:   Munin master addresses (seperated by spaces)
+- `nrpe_allowed_hosts`:   Nagios server addresses (seperated by commas)
 
-Configure ssh public key for root user via `mdata` variable.
+## services
 
-- `root_authorized_keys`: ssh public key for the root user
-
-### root ssh public private key
-
-Configure ssh public and private key pair for root user via `mdata`. We only
-support rsa keys.
-
-- `root_ssh_rsa`: private ssh rsa key for root user
-- `root_ssh_rsa_pub`: public ssh key for root user (mostly not required)
-
-### munin
-
-List of ip addresses of the munin master server that is allowed to connect. The ip addresses should be seperated by whitespace or newline.
-
-- `munin_master_allow`: ip addresses (alternative hostname) of the munin master node
-
-### rsyslog
-
-Remote syslog server that accept syslog tcp connections on specified port. We use our [mi-core-logger](https://github.com/skylime/mi-core-logger) image for that.
-
-- `syslog_host`: ip address and port seperated by colon of the remote syslog server
-
-### postfix
-
-To have cron emails on errors we like to configure postfix as local smtp server.
-
-- `mail_smarthost`: hostname of remote smtp server
-- `mail_auth_user`: smtp username for authentication
-- `mail_auth_pass`: smtp password for authentication
-- `mail_adminaddr`: admin email address for everything from root@localhost
-
-### ssh daemon
-
-Configure ssh public and private key pairs for the host daemon via `mdata`.
-
-- `ssh_host_rsa_key`:     private SSH rsa key
-- `ssh_host_rsa_key.pub`: public SSH rsa key
-- `ssh_host_dsa_key`:     private SSH dsa key
-- `ssh_host_dsa_key.pub`: public SSH dsa key
-
-### nagios
-
-A comma-delimited list of IP address or hostnames that are allowed to talk to the NRPE daemon.
-
-- `nrpe_allowed_hosts`: ip addresses, hostnames allowed to talk to nrpe daemon
+- `4949/tcp`: munin node daemon
+- `5666/tcp`: nagios nrpe daemon

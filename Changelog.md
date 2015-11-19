@@ -1,18 +1,29 @@
 # Changelog
 
-# 15.3.2
+## 15.3.3
+
+### New
+
+* New brand for mesh.io. [Tobias Schäfer]
+
+### Changes
+
+* Simplified and unified the README file. [Tobias Schäfer]
+* Simplified manifest medata key descriptions. [Tobias Schäfer]
+
+## 15.3.2
 
 ### Fix
 
 * Allow IPv6 statless addrconf. Removed ndpd config file. [Tobias Schäfer]
 
-# 15.3.1
+## 15.3.1
 
 ### New
 
 * Nagios NRPE will help to monitor our zones even better. [Tobias Schäfer]
 
-# 15.3.0
+## 15.3.0
 
 ### New
 
