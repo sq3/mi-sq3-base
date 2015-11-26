@@ -1,11 +1,11 @@
-# mi-mesh-base
+# mi-sq3-base
 
 This repository is based on [SkyLime mibe base](https://github.com/skylime/mi-core-base).
 
 ## description
 
 The mesh.io base mibe image with default setup of infrastructure services like
-Munin node, Nagios NRPE, remote syslog and email relay.
+Munin node, remote syslog and email relay.
 
 ## mdata variables
 
@@ -22,9 +22,7 @@ Munin node, Nagios NRPE, remote syslog and email relay.
 - `ssh_host_dsa_key`:     SSH daemon private dsa key
 - `ssh_host_dsa_key.pub`: SSH daemon public dsa key
 - `munin_master_allow`:   Munin master addresses (seperated by spaces)
-- `nrpe_allowed_hosts`:   Nagios server addresses (seperated by commas)
 
 ## services
 
 - `4949/tcp`: munin node daemon
-- `5666/tcp`: nagios nrpe daemon
