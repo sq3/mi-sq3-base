@@ -4,13 +4,12 @@
 	"description":  "mesh.io base image",
 	"organization": "Acme",
 	"brand":        "Instance",
-	"homepage":     "https://github.com/mesh-io/mi-mesh-base",
+	"homepage":     "https://github.com/sq3/mi-blacknet-base",
 	"base":         "fec7e254-6e98-11e5-9284-3f9c607cb3e7",
 	"customer_metadata": {
 		"root_authorized_keys": {"type": "text", "description": "SSH root user public authorized keys"},
 		"root_ssh_rsa":         {"type": "text", "description": "SSH root user private rsa key"},
 		"root_ssh_rsa_pub":     {"type": "text", "description": "SSH root user public rsa key (mostly not required)"},
-		"syslog_host":          {"type": "text", "description": "syslog server address and port (seperated by colon)"},
 		"mail_smarthost":       {"type": "text", "description": "address of remote smtp server"},
 		"mail_auth_user":       {"type": "text", "description": "smtp username if authentication is required"},
 		"mail_auth_pass":       {"type": "text", "description": "smtp password if authentication is required"},
@@ -20,6 +19,5 @@
 		"ssh_host_dsa_key":     {"type": "text", "description": "SSH daemon private dsa key"},
 		"ssh_host_dsa_key.pub": {"type": "text", "description": "SSH daemon public dsa key"},
 		"munin_master_allow":   {"type": "text", "description": "Munin master addresses (seperated by spaces)"},
-		"nrpe_allowed_hosts":   {"type": "text", "description": "Nagios server addresses (seperated by commas)"}
 	}
 }
