@@ -41,16 +41,6 @@ echo "* Activate munin plugins"
 echo "* Create rsyslog.d folder for extra configuration files"
 mkdir -p /opt/local/etc/rsyslog.d
 
-## NAGIOS
-echo "* Create nagios nrpe custom config requirements"
-cat << 'EOF' >> /opt/local/etc/nagios/nrpe.cfg
-
-# custom configuration:
-# place all custom directives here
-include=/opt/local/etc/nagios/nrpe_custom.cfg
-EOF
-mkdir -p /opt/local/etc/nagios/nrpe.d
-
 echo "* Cleaning up."
 rm -rf /root/*
 sm-prepare-image -y
